@@ -1,10 +1,13 @@
-package com.cristo.Jesus;
+package com.cristo.CadastroDeNinjas.Ninjas;
 
+import com.cristo.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
-public class Model {
+public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,11 +15,12 @@ public class Model {
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesModel> missoes;
 
-    public Model() {
+    public NinjaModel() {
     }
 
-    public Model(String nome, String email, int idade) {
+    public NinjaModel(String nome, String email, int idade) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;

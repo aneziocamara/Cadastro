@@ -1,13 +1,13 @@
-package com.cristo.Jesus;
+package com.cristo.CadastroDeNinjas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JesusApplication {
+public class CadastroDeNinjasApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JesusApplication.class, args);
+		SpringApplication.run(CadastroDeNinjasApplication.class, args);
 	}
 
 }

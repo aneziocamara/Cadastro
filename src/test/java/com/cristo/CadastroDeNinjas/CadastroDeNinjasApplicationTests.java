@@ -1,10 +1,10 @@
-package com.cristo.Jesus;
+package com.cristo.CadastroDeNinjas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JesusApplicationTests {
+class CadastroDeNinjasApplicationTests {
 
 	@Test
 	void contextLoads() {
