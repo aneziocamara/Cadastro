@@ -3,8 +3,6 @@ package com.cristo.CadastroDeNinjas.Ninjas;
 import com.cristo.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "tb_cadastro")
 public class NinjaModel {
@@ -15,7 +13,9 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
-    private List<MissoesModel> missoes;
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") //foreign key
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }
@@ -24,6 +24,13 @@ public class NinjaModel {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
+    }
+
+    public NinjaModel(String nome, String email, int idade, MissoesModel missoes) {
+        this.nome = nome;
+        this.email = email;
+        this.idade = idade;
+        this.missoes = missoes;
     }
 
     public String getNome() {
